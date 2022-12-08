@@ -15,7 +15,7 @@ export function CharacterPage() {
           <img src="/images/bruja_escarlata.jpg" className="bruja_escarlata" alt="logo_bruja" />
         </section>
 
-        <h1>MARVEL CHARACTERS LIST</h1>
+        <h1 className="letra_p">MARVEL CHARACTERS LIST</h1>
         <CharactersGrid />
       </div>
     </div>

@@ -27,6 +27,11 @@ export default function CharacterGridPaginated() {
     setTotalItems(data.total);
     setCharacters(data.results);
     setLoading(false);
+    console.log(data.results)
+    const res = JSON.stringify(data);  //convertir los datos a string
+    const res2 = JSON.parse(res);      // cantidad de datos
+    console.log(res2)
+    console.log(res2.results[2].description)   // visualizar las descripciones
   }
 
   const onPageChange = (newPage) => {
@@ -39,7 +44,7 @@ export default function CharacterGridPaginated() {
 
   return (
     <>
-      <Filter query={queryParams} onQueryChange={onQueryChange} />
+      <Filter query={queryParams} onQueryChange={onQueryChange} totalItems={totalItems}/>
       <div className="mvl-grid mvl-grid-6">
         <CharacterGrid
           characters={characters}
@@ -60,10 +65,10 @@ export default function CharacterGridPaginated() {
 CharacterGrid.propTypes = {
   characters: PropTypes.array.isRequired,
   isLoading: PropTypes.bool,
-  itemsPerPage: PropTypes.number
+  itemsPerPage: PropTypes.number,
 };
 
-function CharacterGrid({ characters, isLoading, itemsPerPage }) {
+function CharacterGrid({ characters, isLoading, itemsPerPage}) {
   if (isLoading && characters.length === 0) {
     return <CharacterGridSkeleton amount={itemsPerPage} />;
   }
@@ -72,8 +77,8 @@ function CharacterGrid({ characters, isLoading, itemsPerPage }) {
     return <EmptyState />;
   }
 
-  return characters.map(({ name, image }, index) => (
-    <CharacterCard name={name} image={image} key={index} isSkeleton={isLoading} />
+  return characters.map(({ name, image, description}, index) => (
+    <CharacterCard name={name} image={image} key={index} isSkeleton={isLoading} description={description} />
   ));
 }
 
@@ -85,3 +90,4 @@ const CharacterGridSkeleton = ({ amount }) => {
   const items = [...Array(amount).keys()];
   return items.map((value) => <CharacterCard key={value} isSkeleton />);
 };
+

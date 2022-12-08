@@ -1,25 +1,25 @@
 .mvl-character-gri-filters{
-    border:  solid rgb(199, 36, 15);
+
     height: 130px;
 }
 
 .linea{
     border-bottom:  2px solid rgb(12, 12, 12); /* borde inferior*/
-    position: relative;
-    width: 100.2%;
-    height: 37px;
+    width: 100.5%;
+    height: 37.5px;
 }
 
 .contenerdor_search{
-    border:  2px solid white; /* borde inferior*/
-    position: relative;
+    border:  2.1px solid white; /* borde inferior*/
     height: 38.7px;
-    width: 50%;
+    width: 106%;
+    justify-content: left;
+    margin-left: -12px;
 }
 
 .contenerdor_search:focus-within{ /* el focus-within   se utiliza, para simbolizar el click*/
-    border:  2px solid orange; /* borde inferior*/
-    position: relative;
+    border:  2.1px solid orange; /* borde inferior*/
+
 }
 
 
@@ -45,31 +45,83 @@ input:focus{
 
 .contenerdor_2{
     border:  solid rgb(199, 36, 15);
-    border-bottom:  2px solid rgb(182, 165, 165); /* borde inferior*/
-    height: 36.5px;
-    width: 489px;
-    display: flex;
+    border-bottom:  2px solid rgb(223, 211, 211); /* borde inferior*/
+    height: 36.6px;   /* 36.5*/
+    width: 105.0%;
     align-items:flex-end;      /* aaliniar en la parte de abajo*/
     justify-content: right;  /* ajustar contenido a la derecha*/
-    position:absolute;
-    margin-left: 500px;
+    margin-left: -10px;
+    margin-right: 0px;
+    margin-top: 3px;
+    display: flex;
 }
 
 .contenerdor_3{
-    margin-top: 80px;
-    border:  solid rgb(199, 36, 15);
-    height: 20px;
-    width: 20%;
-    position:absolute;
-    margin-top: 60px;
+    height: 36.5px;
+    width: 105.0%;
+    align-items:baselin;      /* aaliniar en la parte de abajo*/
+    justify-content: left;  /* ajustar contenido a la derecha*/
+    margin-left: -10px;
+    margin-right: 0px;
+    margin-top: 3px;
+    display: flex;
+}
+
+.letra_result{
+    margin-top: 20px;
+    font-weight: 100;
+    font-size: 85%;
+    font-family: 'Times New Roman', Times, serif;
+    color:rgb(150, 132, 112);
 }
 
 .contenerdor_4{
-    margin-top: 80px;
-    border:  solid rgb(199, 36, 15);
-    height: 20px;
-    width: 20%;
-    position:absolute;
-    margin-top: 60px;
-    margin-left: 33.3%;
+    height: 36.5px;
+    width: 105.0%;
+    align-items:flex-end;      /* aaliniar en la parte de abajo*/
+    justify-content: right;  /* ajustar contenido a la derecha*/
+    margin-left: -10px;
+    margin-right: 0px;
+    margin-top: 3px;
+    display: flex;
 }
+
+.form-select{
+    width: 70px;
+    height: 30px;
+    font-weight: 10px;
+    font-size:80%;
+    font-family: 'Times New Roman', Times, serif;
+    border: none;
+    margin-right: -9px;
+    margin-bottom:  -5px;
+}
+
+.letra{
+    margin-bottom: 2px;
+    margin-right: -0px;
+    font-size:80%;
+    color: rgba(121, 71, 71, 0.774);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

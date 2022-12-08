@@ -26,6 +26,7 @@ export default function Pagination({ totalItems, pageSize = 10, initialPage = 1,
     setCurrentPage(prevPage);
   }
 
+
   useEffect(() => {
     onPageChange(currentPage);
   }, [currentPage]);
@@ -40,7 +41,28 @@ export default function Pagination({ totalItems, pageSize = 10, initialPage = 1,
           <BiChevronLeft />
         </button>
         <button disabled={isLastPage(currentPage, totalPages)} onClick={onNextpageClick}>
-          <BiChevronRight />
+          previus <BiChevronRight />
+        </button>
+        <button disabled={isFirstPage(currentPage)} onClick={onPreviousPageClick}>
+        <strong>{currentPage} </strong>
+        </button>
+        <button disabled={isFirstPage(currentPage)} onClick={onPreviousPageClick}>
+          <strong>{currentPage + 1} </strong>
+        </button>
+        <button disabled={isFirstPage(currentPage)} onClick={onPreviousPageClick}>
+        <strong>{currentPage + 2} </strong>
+        </button>
+        <button disabled={isFirstPage(currentPage)} onClick={onPreviousPageClick}>
+          ...
+        </button>
+        <button disabled={isFirstPage(currentPage)} onClick={onPreviousPageClick}>
+        <strong>{currentPage} </strong>
+        </button>
+        <span className="mvl-paginator__text">
+        ...
+      </span>
+        <button className= "uno" disabled={isFirstPage(currentPage)} onClick={onPreviousPageClick}>
+        58
         </button>
       </div>
     </div>
