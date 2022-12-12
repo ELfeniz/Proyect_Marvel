@@ -19,7 +19,7 @@ export default function CharacterGridPaginated() {
 
   useEffect(() => {
     fetchCharactersAtPage();
-  }, []);
+  }, []);                        // para que no se ejecute continuamente simplemente se le da un arreglo
 
   async function fetchCharactersAtPage(page = 1) {
     setLoading(true);
@@ -28,6 +28,7 @@ export default function CharacterGridPaginated() {
     setCharacters(data.results);
     setLoading(false);
     console.log(data.results)
+    console.log("total"+data.total)
     const res = JSON.stringify(data);  //convertir los datos a string
     const res2 = JSON.parse(res);      // cantidad de datos
     console.log(res2)

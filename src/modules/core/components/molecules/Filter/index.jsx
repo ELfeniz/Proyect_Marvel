@@ -1,6 +1,8 @@
 import './styles.scss';
 import { BsSearch } from 'react-icons/bs';
 import Filter_2 from '@/modules/core/components/molecules/Filter_2';
+import Filter_3 from '../Filter_3';
+
 import PropTypes from 'prop-types';
 
 Filter.propTypes = {
@@ -23,16 +25,15 @@ return (
           </div>
           <div className="col">
             <div className="contenerdor_2">
-              <BsSearch className="icon2" />
               <Filter_2/>
+              <Filter_3/>
             </div>
           </div>
         </div>
         <div className="row align-items-center">
           <div className="col">
             <div className="contenerdor_3">
-              <h5 className="letra_result">2702 RESULTS {totalItems}</h5>
-              <span>{totalItems}</span>
+              <h5 className="letra_result"> {totalItems} RESULTS</h5>
             </div>
           </div>
           <div className="col">
@@ -40,7 +41,7 @@ return (
               <h6 className="letra">SORT BY</h6>
               <select className="form-select">
                 <option selected>A-Z</option>
-                <option value="1">Z-A</option>
+                <option value="1" >Z-A</option>
               </select>
             </div>
           </div>

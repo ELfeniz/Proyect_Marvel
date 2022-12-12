@@ -1,16 +1,19 @@
 /* _________________________________________________________________________________________________________________________________________________________________*/
 /* _____________________________________________Contenedores _____________________________________________*/
-.container2f{
+.containerf{
+    position: relative;
+    width: 14%;
     background-color: #fff;
-    width: 100%;
-    margin-right: 6%;
-
+    justify-content: right;
 }
 
 /* _________________________________________________________________________________________________________________________________________________________________*/
 /* _____________________________________________Contenedor del botón de la selección de el componente Movies _____________________________________________*/
 .selec-btn{
-    margin-right: 0%;
+    display: flex;
+    justify-content: right;
+    margin-left: 10%;
+    position: relative;
 }
 
 /* _________________________________________________________________________________________________________________________________________________________________*/
@@ -104,7 +107,7 @@
 .modal-open{
     position:absolute;
     display: flex;
-    margin-right: -20%;
+    margin-left:-20% ;
     margin-top: 10%;
     width: 360px;
     height: 356%;
@@ -118,7 +121,10 @@
     font-weight: 400;
     color: black;
     border: none;
-
+    background-color: #fff;
+    margin-right: -10%;
+    justify-content: right;
+    position: relative;
 }
 /* _________________________________________________________________________________________________________________________________________________________________*/
 /* _____________________________________________Botones una vez presionado el botón de selección del contenido de Movies_____________________________________________*/
@@ -188,10 +194,10 @@
 
 
 
-.principal{
+.principal2{
     position:absolute;
     height: 100px;
-    margin-left: 70px;
+    margin-left: -300px;
     margin-top: 5px;
 }
 

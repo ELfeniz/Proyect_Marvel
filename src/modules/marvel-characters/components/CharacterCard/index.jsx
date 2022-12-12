@@ -5,7 +5,7 @@ CharacterCard.propTypes = {
   image: PropTypes.string,
   name: PropTypes.string,
   isSkeleton: PropTypes.bool,
-  description: PropTypes.any
+  description: PropTypes.string
 };
 
 export default function CharacterCard({ image, name, isSkeleton, description }) {
@@ -16,7 +16,7 @@ export default function CharacterCard({ image, name, isSkeleton, description }) 
       </div>
       <div className="mvl-character-card__body">
         <h5 className="u-no-margin">{name}</h5>
-        <h7 className="u-no-margin2">{description}</h7>
+        <span className="u-no-margin2">{description}</span>
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ Pagination.propTypes = {
   onPageChange: PropTypes.func
 };
 
-export default function Pagination({ totalItems, pageSize = 10, initialPage = 1, onPageChange }) {
+export default function Pagination({ totalItems, pageSize = 24, initialPage = 1, onPageChange }) {
   const totalPages = getFlooredToatalPages(totalItems, pageSize);
   const [currentPage, setCurrentPage] = useState(initialPage);
 
@@ -26,6 +26,15 @@ export default function Pagination({ totalItems, pageSize = 10, initialPage = 1,
     setCurrentPage(prevPage);
   }
 
+  function ultimaPageClick() {
+    const prevPage = totalPages;
+    setCurrentPage(prevPage);
+  }
+
+  function primeraPageClick() {
+    const prevPage = 1;
+    setCurrentPage(prevPage);
+  }
 
   useEffect(() => {
     onPageChange(currentPage);
@@ -38,31 +47,31 @@ export default function Pagination({ totalItems, pageSize = 10, initialPage = 1,
       </span>
       <div className="mvl-paginator__actions">
         <button disabled={isFirstPage(currentPage)} onClick={onPreviousPageClick}>
-          <BiChevronLeft />
+        <BiChevronLeft /> PREV 
         </button>
-        <button disabled={isLastPage(currentPage, totalPages)} onClick={onNextpageClick}>
-          previus <BiChevronRight />
+        <button disabled={isFirstPage(currentPage)} onClick={primeraPageClick}>
+        <strong>{1} </strong>
         </button>
-        <button disabled={isFirstPage(currentPage)} onClick={onPreviousPageClick}>
-        <strong>{currentPage} </strong>
-        </button>
-        <button disabled={isFirstPage(currentPage)} onClick={onPreviousPageClick}>
+        <button  onClick={onPreviousPageClick}>
           <strong>{currentPage + 1} </strong>
         </button>
-        <button disabled={isFirstPage(currentPage)} onClick={onPreviousPageClick}>
+        <button  onClick={onPreviousPageClick}>
         <strong>{currentPage + 2} </strong>
         </button>
-        <button disabled={isFirstPage(currentPage)} onClick={onPreviousPageClick}>
-          ...
+        <button  onClick={onPreviousPageClick}>
+        <strong>{currentPage + 3} </strong>
         </button>
-        <button disabled={isFirstPage(currentPage)} onClick={onPreviousPageClick}>
-        <strong>{currentPage} </strong>
+        <button  onClick={onPreviousPageClick}>
+        <strong>{currentPage + 4} </strong>
         </button>
         <span className="mvl-paginator__text">
         ...
       </span>
-        <button className= "uno" disabled={isFirstPage(currentPage)} onClick={onPreviousPageClick}>
-        58
+        <button disabled={isFirstPage(totalPages)} onClick={ultimaPageClick}>
+        <strong>{totalPages}</strong>
+        </button>
+        <button disabled={isLastPage(currentPage, totalPages)} onClick={onNextpageClick}>
+          NEXT <BiChevronRight />
         </button>
       </div>
     </div>
@@ -90,5 +99,6 @@ function getFlooredToatalPages(totalItems, pageSize) {
 }
 
 function getToatalPages(totalItems, pageSize) {
-  return totalItems / pageSize;
+
+  return (totalItems / pageSize)+1;
 }

@@ -1,7 +1,13 @@
+import { NavMenu } from '@/modules/core/components/molecules/NavMenu';
+import MainFooter from '@/modules/core/components/molecules/MainFooter';
+
+
 const SubPage = () => {
   return (
     <>
-      <h1>SubPage</h1>
+      <NavMenu />
+
+      <MainFooter />
     </>
   );
 };

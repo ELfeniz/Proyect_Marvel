@@ -3,7 +3,7 @@ import { useState }  from 'react';   // Hooks paquete, para ver los estados
 import Modal from "./Modal"
 import { AiFillCaretDown } from "react-icons/ai";
 
-export default function Filter_2() {
+export default function Filter_3() {
 
   const [estado, setestado] = useState(false); 
   // useState, va hacer el estado inicial
@@ -21,10 +21,10 @@ export default function Filter_2() {
   }
 
   return (
-    <div className="container2f">
+    <div className="containerf">
       <div className="selec-btn">
         <button className="btn-text" onClick={openModal}>
-          MOVIES <AiFillCaretDown className={`icon1 ${estado && 'icon1-open'}`}/>
+          TV <AiFillCaretDown className={`icon1 ${estado && 'icon1-open'}`}/>
         </button>
       </div>
       <Modal estado={estado}
@@ -33,5 +33,3 @@ export default function Filter_2() {
     </div>
   );
 }
-
-  

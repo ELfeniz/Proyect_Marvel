@@ -27,7 +27,7 @@
     text-decoration: none;
     font-weight: bold;
     font-size:small;
-    margin-left: 25px;
+    margin-left: 20px;
     &:hover{
         color: var(--color-primary-light);
     }
@@ -39,7 +39,11 @@
 
 .mvl-navbar__actions{
     height: 100%;
-    gap: 16px;
+    gap: 50px;
+    align-content: center;
+    align-items: center;
+    margin-left: 120px;
+
 }
 
 
