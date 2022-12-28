@@ -98,6 +98,230 @@
     font-weight: 900;
     display:block;
 }
+
+.check-icon0{
+    font-size: 11px;
+    color: red;
+    font-weight: 900;
+    display: none;
+}
+
+.check-icon-open0{
+    font-size: 11px;
+    color: red;
+    font-weight: 900;
+    display:block;
+}
+
+.check-icon1{
+    font-size: 11px;
+    color: red;
+    font-weight: 900;
+    display: none;
+}
+
+.check-icon-open1{
+    font-size: 11px;
+    color: red;
+    font-weight: 900;
+    display:block;
+}
+
+.check-icon2{
+    font-size: 11px;
+    color: red;
+    font-weight: 900;
+    display: none;
+}
+
+.check-icon-open2{
+    font-size: 11px;
+    color: red;
+    font-weight: 900;
+    display:block;
+}
+
+.check-icon3{
+    font-size: 11px;
+    color: red;
+    font-weight: 900;
+    display: none;
+}
+
+.check-icon-open3{
+    font-size: 11px;
+    color: red;
+    font-weight: 900;
+    display:block;
+}
+
+.check-icon4{
+    font-size: 11px;
+    color: red;
+    font-weight: 900;
+    display: none;
+}
+
+.check-icon-open4{
+    font-size: 11px;
+    color: red;
+    font-weight: 900;
+    display:block;
+}
+
+.check-icon5{
+    font-size: 11px;
+    color: red;
+    font-weight: 900;
+    display: none;
+}
+
+.check-icon-open5{
+    font-size: 11px;
+    color: red;
+    font-weight: 900;
+    display:block;
+}
+
+.check-icon6{
+    font-size: 11px;
+    color: red;
+    font-weight: 900;
+    display: none;
+}
+
+.check-icon-open6{
+    font-size: 11px;
+    color: red;
+    font-weight: 900;
+    display:block;
+}
+
+.check-icon7{
+    font-size: 11px;
+    color: red;
+    font-weight: 900;
+    display: none;
+}
+
+.check-icon-open7{
+    font-size: 11px;
+    color: red;
+    font-weight: 900;
+    display:block;
+}
+
+.check-icon8{
+    font-size: 11px;
+    color: red;
+    font-weight: 900;
+    display: none;
+}
+
+.check-icon-open8{
+    font-size: 11px;
+    color: red;
+    font-weight: 900;
+    display:block;
+}
+
+.check-icon9{
+    font-size: 11px;
+    color: red;
+    font-weight: 900;
+    display: none;
+}
+
+.check-icon-open9{
+    font-size: 11px;
+    color: red;
+    font-weight: 900;
+    display:block;
+}
+
+.check-icon10{
+    font-size: 11px;
+    color: red;
+    font-weight: 900;
+    display: none;
+}
+
+.check-icon-open10{
+    font-size: 11px;
+    color: red;
+    font-weight: 900;
+    display:block;
+}
+
+.check-icon11{
+    font-size: 11px;
+    color: red;
+    font-weight: 900;
+    display: none;
+}
+
+.check-icon-open11{
+    font-size: 11px;
+    color: red;
+    font-weight: 900;
+    display:block;
+}
+
+.check-icon12{
+    font-size: 11px;
+    color: red;
+    font-weight: 900;
+    display: none;
+}
+
+.check-icon-open12{
+    font-size: 11px;
+    color: red;
+    font-weight: 900;
+    display:block;
+}
+
+.check-icon13{
+    font-size: 11px;
+    color: red;
+    font-weight: 900;
+    display: none;
+}
+
+.check-icon-open13{
+    font-size: 11px;
+    color: red;
+    font-weight: 900;
+    display:block;
+}
+
+.check-icon14{
+    font-size: 11px;
+    color: red;
+    font-weight: 900;
+    display: none;
+}
+
+.check-icon-open14{
+    font-size: 11px;
+    color: red;
+    font-weight: 900;
+    display:block;
+}
+
+.check-icon15{
+    font-size: 11px;
+    color: red;
+    font-weight: 900;
+    display: none;
+}
+
+.check-icon-open15{
+    font-size: 11px;
+    color: red;
+    font-weight: 900;
+    display:block;
+}
 /* _________________________________________________________________________________________________________________________________________________________________*/
 /* _____________________________________________Diseño del Modal para el despliegue de las selección del contenido de Movies_____________________________________________*/
 .modal{
@@ -109,30 +333,35 @@
     display: flex;
     margin-left:-20% ;
     margin-top: 10%;
-    width: 360px;
-    height: 356%;
+    width: 480px;
+    height: 47%;
 }
 
 /* _________________________________________________________________________________________________________________________________________________________________*/
 /* _____________________________________________Boton para abrir la selección de el componente Movies_____________________________________________*/
 
-.btn-text{
+.btn_tv{
     font-size: 16px;
     font-weight: 400;
     color: black;
     border: none;
     background-color: #fff;
-    margin-right: -10%;
+    margin-right: 0%;
     justify-content: right;
-    position: relative;
+    position: absolute;
+    width: 90px;
+    font-weight: bold; /*  Glosor de la funete */
+    margin-top: -26px;
+    margin-right: -12px;
+    height: 25px;
 }
 /* _________________________________________________________________________________________________________________________________________________________________*/
 /* _____________________________________________Botones una vez presionado el botón de selección del contenido de Movies_____________________________________________*/
 
-.boton_cancel{
+.boton_cancel2{
     margin-top:8px;
-    margin-left: 290px;
-    position: relative;
+    margin-left: 390px;
+    position: absolute;
     height: 30px;
     width: 70px;
     border: none;
@@ -141,10 +370,10 @@
     font-weight: 500;
 }
 
-.boton_reset{
+.boton_reset2{
     margin-top: 8px;
-    margin-left: -132px;
-    position: relative;
+    margin-left: 300px;
+    position: absolute;
 
     height: 30px;
     width: 60px;
@@ -154,9 +383,8 @@
     font-weight: 500;
 }
 
-.boton_aply{
+.boton_aply2{
     margin-top: 8px;
-    margin-left: 0px;
     position: absolute;
     height: 30px;
     width: 60px;
@@ -164,17 +392,25 @@
     background-color: #fff;
     color: rgb(117, 110, 110);
     font-weight: 500;
+    margin-left: 10px;
 }
 
-
-.boton_cancel:hover{
+.boton_aply2:hover{
 
     color: rgb(0, 0, 0);
+    font-weight: 700;
+}
+
+.boton_cancel2:hover{
+
+    color: rgb(0, 0, 0);
+    font-weight: 700;
 
 }
 
-.boton_reset:hover{
+.boton_reset2:hover{
     color: rgb(0, 0, 0);
+    font-weight: 700;
 }
 
 
@@ -196,9 +432,10 @@
 
 .principal2{
     position:absolute;
-    height: 100px;
+    height: 800px;
     margin-left: -300px;
     margin-top: 5px;
+    background-color: aqua;
 }
 
 .list-botones{
@@ -213,7 +450,34 @@
     display:flex;
     margin-left:-10% ;
     margin-top: 353px;
-    width: 360px;
+    width: 480px;
     height: 51px;
     background-color: rgb(255, 255, 255);
 }
+
+.modal-openff{
+    position:absolute;
+    display: flex;
+    margin-left:-20% ;
+    margin-top: 10%;
+    width: 480px;
+    height: 45%;
+}
+
+.list-botones-openf{
+    border-top: solid 5px rgb(156, 16, 16);
+    position:absolute;
+    display:flex;
+    margin-left:-10% ;
+    margin-top: 353px;
+    width: 480px;
+    height: 51px;
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+
+
+
+

@@ -23,7 +23,7 @@ export default function Filter_2() {
   return (
     <div className="container2f">
       <div className="selec-btn">
-        <button className="btn-text" onClick={openModal}>
+        <button className="btn_movie" onClick={openModal}>
           MOVIES <AiFillCaretDown className={`icon1 ${estado && 'icon1-open'}`}/>
         </button>
       </div>

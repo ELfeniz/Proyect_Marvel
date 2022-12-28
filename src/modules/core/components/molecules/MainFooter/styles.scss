@@ -53,6 +53,7 @@
     display: flex;
 }
 
+
 .contenerdor_dat_pie5{
     position: relative;
     margin-left: 450px;
@@ -132,6 +133,7 @@
     margin-top: 70px;
     width: 210px;
     height: 45%;
+    position: relative;
     
     
 }
@@ -185,7 +187,7 @@
     height: 40px;
     font-size: 20px;
     background-color: var(--color-primary-dark);
-    color: aliceblue;
+    color: rgb(69, 72, 75);
     border: none;
     font-family: Roboto,Trebuchet MS,Helvetica,Arial,sans-serif;
     margin-left: -5%;
@@ -196,11 +198,10 @@
     font-size: 20px;
     margin-top: 10px;
     background-color: var(--color-primary-dark);
-    color: aliceblue;
+    color: rgb(69, 72, 75);
     border: none;
     font-family: Roboto,Trebuchet MS,Helvetica,Arial,sans-serif;
     margin-left: -6%;
-    flex-wrap: wrap;
 }
 
 .pie_datf1{
@@ -256,4 +257,15 @@
     color: aliceblue;
     border: none;
     font-family: Roboto,Trebuchet MS,Helvetica,Arial,sans-serif;
+}
+
+
+.pie_icon1f:hover{
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.pie_icon1:hover{
+    color: aliceblue;
+    cursor: pointer;
 }

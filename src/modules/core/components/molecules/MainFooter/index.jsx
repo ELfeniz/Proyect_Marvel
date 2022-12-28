@@ -25,81 +25,97 @@ export default function MainFooter() {
                 <button className="btn-text1">CAREERS</button>
                 <button className="btn-text1">INTERNSHIPS</button>
               </div>
+            </div>
+            <div className="col">
+              <div className="contenerdor_dat_pie2">
+                <button className="btn-text1">ADVERTISING</button>
+                <button className="btn-text1">DISNEY+</button>
+                <button className="btn-text1">MARVELHQ.COM</button>
+                <button className="btn-text1">REDEEM DIGITAL COMICS</button>
               </div>
-              <div className="col">
-                <div className="contenerdor_dat_pie2">
-                  <button className="btn-text1">ADVERTISING</button>
-                  <button className="btn-text1">DISNEY+</button>
-                  <button className="btn-text1">MARVELHQ.COM</button>
-                  <button className="btn-text1">REDEEM DIGITAL COMICS</button>
-                </div>
-                </div>
-                <div className="col">
-                <div className="contenerdor_dat_pie3">
-                  <button className="pie_f"><img className="imagen_1p" src="/images/pie1.png"></img>    MARVEL INSIDER</button>
-                  <button className="pie_f2"><img className="imagen_2p" src="/images/pie2.jpg"></img> MARVEL UNLIMITED</button>
-                </div>
-                </div>
-                <div className="col">
-                <div className="contenerdor_dat_pie4">
-                  <h5> FOLLOW MARVEL</h5>
-                  <button className="pie_icon1f"> <AiFillFacebook/> </button>
-                  <button className="pie_icon1"> <BsCloud/> </button>
-                  <button className="pie_icon1"> <BsRssFill/> </button>
-                  <button className="pie_icon1"> <BsChatLeftText/> </button>
-                  <button className="pie_icon1"> <BsYoutube/> </button>
-                  <button className="pie_icon1"> <BsSnapchat/> </button>
-                </div>
-                </div>
+            </div>
+            <div className="col">
+              <div className="contenerdor_dat_pie3">
+                <button className="pie_f">
+                  <img className="imagen_1p" src="/images/pie1.png" to="/NEWS"></img> MARVEL INSIDER
+                </button>
+                <button className="pie_f2">
+                  <img className="imagen_2p" src="/images/pie2.jpg"></img> MARVEL UNLIMITED
+                </button>
+              </div>
+            </div>
+            <div className="col">
+              <div className="contenerdor_dat_pie4">
+                <h5> FOLLOW MARVEL</h5>
+                <button className="pie_icon1f">
+                  <BsCloud />
+                </button>
+                <button className="pie_icon1">
+                  <AiFillFacebook />
+                </button>
+                <button className="pie_icon1">
+                  <BsRssFill />
+                </button>
+                <button className="pie_icon1">
+                  <BsChatLeftText />
+                </button>
+                <button className="pie_icon1">
+                  <BsYoutube />
+                </button>
+                <button className="pie_icon1">
+                  <BsSnapchat />
+                </button>
+              </div>
+            </div>
           </div>
-          <div className="row">
-            <div className="col align-items-lg-baseline">
-              <div className="contenerdor_dat_pie5">
-                <button className="btn-text1">Terms of Use</button>
-              </div>
+          <div className="row" >
+              <div className="col">
+                <div className="contenerdor_dat_pie5">
+                  <button className="btn-text1">Terms of Use</button>
+                </div>
               </div>
               <div className="col">
                 <div className="contenerdor_dat_pie6">
                   <button className="btn-text1">Privacy Policy</button>
                 </div>
-                </div>
-                <div className="col">
+              </div>
+              <div className="col">
                 <div className="contenerdor_dat_pie7">
                   <button className="pie_datf1">Your California Privacy Rights</button>
                 </div>
-                </div>
-                <div className="col">
+              </div>
+              <div className="col">
                 <div className="contenerdor_dat_pie8">
                   <button className="pie_datf2">Do Not Sell My Personal Information</button>
                 </div>
-                </div>
-                <div className="col">
+              </div>
+              <div className="col">
                 <div className="contenerdor_dat_pie9">
                   <button className="pie_datf3">Children`s Online Privacy Policy</button>
                 </div>
-                </div>
-                <div className="col">
+              </div>
+              <div className="col">
                 <div className="contenerdor_dat_pie10">
                   <button className="pie_datf4">License Agreement</button>
                 </div>
-                </div>
-                <div className="col">
+              </div>
+              <div className="col">
                 <div className="contenerdor_dat_pie11">
                   <button className="pie_datf5">Interest-Based Ads</button>
                 </div>
-                </div>
-          </div>
+              </div>
+            </div>
           <div className="row">
             <div className="col">
               <div className="contenerdor_dat_pie12">
                 <button className="btn-text1">Marvel Insider Terms</button>
               </div>
+            </div>
+            <div className="col">
+              <div className="contenerdor_dat_pie13">
+                <button className="btn-text1">©2022 MARVEL</button>
               </div>
-              <div className="col">
-                <div className="contenerdor_dat_pie13">
-                  <button className="btn-text1">©2022 MARVEL</button>
-                </div>
-                </div>
+            </div>
           </div>
         </div>
       </div>

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 import { getCharactersForGrid } from '@/modules/marvel-characters/services';
 import { getCharactersForGrid2 } from '@/modules/marvel-characters/services';
-import { getCharactersForGrid3 } from '@/modules/marvel-characters/services';
 
 import CharacterCard from '@/modules/marvel-characters/components/CharacterCard';
 import Paginator from '@/modules/core/components/molecules/Paginator';
@@ -14,7 +13,7 @@ const INITIAL_PAGE = 1;
 const ITEMS_PER_PAGE = 24;
 
 const orden = {
-  orderBy:"name"
+  orderBy:"-name"
 };
 
 CharacterGridPaginated.propTypes = {
@@ -45,14 +44,13 @@ export default function CharacterGridPaginated( {n, busqueda} ) {
     setTotalItems(data.total);
     setCharacters(data.results);
     setLoading(false);
-    console.log("option1")
-    //console.log(data)
-    //console.log(data.results)
-    //console.log("total1"+data.total)
-    //const res = JSON.stringify(data);  //convertir los datos a string
-    //const res2 = JSON.parse(res);      // cantidad de datos
-    //console.log(res2)
-    //console.log(res2.results[2].description)   // visualizar las descripciones
+    console.log(data)
+    console.log(data.results)
+    console.log("total"+data.total)
+    const res = JSON.stringify(data);  //convertir los datos a string
+    const res2 = JSON.parse(res);      // cantidad de datos
+    console.log(res2)
+    console.log(res2.results[2].description)   // visualizar las descripciones
     }
     if(n==2){
       setLoading(true);
@@ -62,7 +60,7 @@ export default function CharacterGridPaginated( {n, busqueda} ) {
       setLoading(false);
       console.log(data)
       console.log(data.results)
-      console.log("total2"+data.total)
+      console.log("total"+data.total)
       const res = JSON.stringify(data);  //convertir los datos a string
       const res2 = JSON.parse(res);      // cantidad de datos
       console.log(res2)
@@ -70,21 +68,21 @@ export default function CharacterGridPaginated( {n, busqueda} ) {
       }
       if(n==3){
    
-          const autor = {
-            series: busqueda
-          };
+        const autor = {
+          series: busqueda
+        };
 
-          const orden = {
-            orderBy:"name"
-          };
+        const orden = {
+          orderBy:"-name"
+        };
 
-        setLoading(true);
-        const data = await getCharactersForGrid3(page, ITEMS_PER_PAGE, autor, orden);
-        setTotalItems(data.total);
-        setCharacters(data.results);
-        setLoading(false);
+      setLoading(true);
+      const data = await getCharactersForGrid2(page, ITEMS_PER_PAGE, autor, orden);
+      setTotalItems(data.total);
+      setCharacters(data.results);
+      setLoading(false);
 
-        }
+      }
   }
 
   const onPageChange = (newPage) => {
@@ -136,7 +134,7 @@ function CharacterGrid2({ characters, isLoading, itemsPerPage}) {
 }
 
 const EmptyState = () => {
-  return <h2> <strong>SORRY, NOTHING TO SEE HERE</strong></h2>;
+  return <h1>No elements found</h1>;
 };
 
 const CharacterGridSkeleton = ({ amount }) => {
