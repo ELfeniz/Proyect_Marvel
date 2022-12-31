@@ -196,3 +196,199 @@
 }
 
 
+.container2f{
+    background-color: #fff;
+    width: 140%;
+    margin-right: 6%;
+
+}
+
+/* _________________________________________________________________________________________________________________________________________________________________*/
+/* _____________________________________________Contenedor del botón de la selección de el componente Movies _____________________________________________*/
+.selec-btn{
+    margin-right: 0%;
+}
+
+/* _________________________________________________________________________________________________________________________________________________________________*/
+/* _____________________________________________ul que almacenara todos los datos de la lista de selección_____________________________________________*/
+.list-items{
+    position: static;
+    margin-top: 10;
+    padding: 16px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgb(224, 38, 38);
+    width: 150%;
+    /* display: none; /* Ocultar opciones*/
+}
+
+/* _________________________________________________________________________________________________________________________________________________________________*/
+/* _____________________________________________item o lista____________________________________________*/
+.item{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+.item-text{
+    font-size: 17;
+    font-weight:700;
+    height: 24px;
+    color: rgb(0, 0, 0);
+    font-family: Roboto,Trebuchet MS,Helvetica,Arial,sans-serif;
+    margin-left: 10px;
+}
+
+/* _________________________________________________________________________________________________________________________________________________________________*/
+/* _____________________________________________darle efecto cuando se ponga el cursor encima de cada item o lista____________________________________________*/
+.item:hover{
+    background-color: rgb(47, 138, 161);
+    .checkbox{
+        border: 1.5px solid rgb(233, 230, 230);
+    }
+    .item-text{
+        color: rgb(255, 255, 255);
+    }
+    .check-icon{
+        color: rgb(255, 255, 255);
+    }
+}
+/* _________________________________________________________________________________________________________________________________________________________________*/
+/* _____________________________________________Contenedor del Icono para cuando se presiona una selección_____________________________________________*/
+.checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 18px;
+    width: 18px;
+    margin-right: 4px;
+    border: 1.5px solid rgb(207, 11, 11);
+}
+/*
+.checkbox{
+    color: red;
+    font-size: 11px;
+    transform: scale(0);
+    transition: all 0.3s ease-in-out;
+}
+*/
+/* _________________________________________________________________________________________________________________________________________________________________*/
+/* _____________________________________________Botón para activar la elección de el componente Movies_____________________________________________*/
+
+
+/* _________________________________________________________________________________________________________________________________________________________________*/
+/* _____________________________________________Diseño del Modal para el despliegue de las selección del contenido de Movies_____________________________________________*/
+
+.modal-openff{
+    position:absolute;
+    display: flex;
+    margin-left:-20% ;
+    margin-top: 10%;
+    width: 480px;
+    height: 20%;
+}
+/* _________________________________________________________________________________________________________________________________________________________________*/
+/* _____________________________________________Boton para abrir la selección de el componente Movies_____________________________________________*/
+
+.btn_movie{
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    border: none;
+    font-weight: bold; /*  Glosor de la funete */
+    position: relative;
+    background-color: #fff;
+    margin-right: 10px;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* _________________________________________________________________________________________________________________________________________________________________*/
+/* _____________________________________________Botones una vez presionado el botón de selección del contenido de Movies_____________________________________________*/
+
+.boton_cancel{
+    margin-top:8px;
+    margin-left: 290px;
+    position: relative;
+    height: 30px;
+    width: 70px;
+    border: none;
+    background-color: #fff;
+    color: rgb(117, 110, 110);
+    font-weight: 500;
+}
+
+.boton_reset{
+    margin-top: 8px;
+    margin-left: -132px;
+    position: relative;
+
+    height: 30px;
+    width: 60px;
+    border: none;
+    background-color: #fff;
+    color: rgb(117, 110, 110);
+    font-weight: 500;
+}
+
+.boton_aply{
+    margin-top: 8px;
+    margin-left: 0px;
+    position: absolute;
+    height: 30px;
+    width: 60px;
+    border: none;
+    background-color: #fff;
+    color: rgb(117, 110, 110);
+    font-weight: 500;
+}
+
+
+.boton_cancel:hover{
+
+    color: rgb(0, 0, 0);
+
+}
+
+.boton_reset:hover{
+    color: rgb(0, 0, 0);
+}
+
+
+/* _________________________________________________________________________________________________________________________________________________________________*/
+/* _____________________________________________Icono del botón principal para abrir la selección_____________________________________________*/
+.icon1{
+    transform: rotate(0);
+    opacity: 1;
+    transition: 0.4s ease-in-out ;
+}
+
+.icon1-open{
+    transform: rotate(-180deg);
+    opacity: 1;
+    transition: 0.4s ease-in-out ;
+}
+
+
+
+.principal{
+    position:absolute;
+    height: 100px;
+    margin-left: 70px;
+    margin-top: 5px;
+}
+
+

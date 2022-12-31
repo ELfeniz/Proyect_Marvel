@@ -1,3 +1,4 @@
+import './styles.scss';
 import CharactersGrid from '@/modules/marvel-characters/components/CharacterGrid';
 import CharactersGrid2 from '@/modules/marvel-characters/components/CharacterGrid2';
 import React, { useState, useEffect } from 'react';
@@ -8,12 +9,20 @@ import { getCharactersForGrid } from '@/modules/marvel-characters/services';
 import Filter_3 from 'src/modules/core/components/molecules/Filter_3';
 import Filter_2 from 'src/modules/core/components/molecules/Filter_2';
 
+import Autocomplet from 'src/modules/marvel-characters/components/Autocomplet';
+
+
+
 export function CharacterPage() {
-  const [text, setText] = useState('');
+
+  const [text, settext] = useState('');
+
   const [text2, setText2] = useState('');
   const [text3, setText3] = useState(false);
 
-  const [estado, setestado] = useState(false);
+  const [autocomplet, setautocomplet] = useState(false); 
+
+  // const [estado, setestado] = useState(true);
 
   const [characters, setCharacters] = useState([]);
 
@@ -45,7 +54,7 @@ export function CharacterPage() {
       };
 
       var totaldat = ["Zzzax", "Zuras"];
-      for (var i = 1; i <= 65; i++) {
+      for (var i = 1; i <= 65; i++) {     //65
         const data = await getCharactersForGrid(i, 24, orden, name);
         for (var i2 = 0; i2 <= 23; i2++) {
           var data3 = data.results[i2].name;
@@ -58,14 +67,12 @@ export function CharacterPage() {
   }
   
   function Orden() {
-
-
     if (select == 'A-Z') {
       if(modal==false){
         console.log('si');
         if (text3 == true) {
           console.log(text3);
-          console.log(text2);
+          console.log("te encontrre", text2);
           if (text2.length < 1) {
             return <CharactersGrid n={1} />;
           } else {
@@ -106,61 +113,106 @@ export function CharacterPage() {
         return <CharactersGrid2 n={3} busqueda={textmodal} />;
       }
     }
+    setText3(false);
   }
 
-  function Orden2(){
-    setestado(true)
-    if(text.length >= 3){
-      if((characters.filter((item) => item.toLowerCase().includes(text.trim().toLowerCase()))).length > 0){
+  // function Orden2(){
+  //   if(text.length >= 3){
+  //     setestado(true)
+  //     if((characters.filter((item) => item.toLowerCase().includes(text.trim().toLowerCase()))).length > 0){
 
-        return (
-          <div className={`modal ${estado && 'modal-optionf'}`}>
-              {characters.filter((item) =>
-              item.toLowerCase().includes(text.trim().toLowerCase()))
-                        .slice(0, 5)
-                        .map((item) =>  <option className="option3" key={item}>{item}</option> )}
-          </div>
-            )
-      }else{
-        return (
-        <div className={`modal ${estado && 'modal-option2f'}`}>
-          <option className="option3"  >NO MATCHES FOUND!</option>  
-        </div>
-        )
+  //       return (
+  //         <div className={`modal ${estado && 'modal-optionf'}`}>
+  //             {characters.filter((item) =>
+  //             item.toLowerCase().includes(text.trim().toLowerCase()))
+  //                       .slice(0, 5)
+  //                       .map((item) =>  <option className="option3"  key={item}>{item}</option> )}
+  //         </div>
+  //           )
+  //     }else{
+  //       return (
+  //       <div className={`modal ${estado && 'modal-option2f'}`}>
+  //         <ul className="list-items2">
+  //           <li className="item" value={"KEEP TYPING..."} onClick={(e) => settext(e.target.value)}>
+  //             <span className="item-text">NO MATCHES FOUND!</span>
+  //           </li>
+  //         </ul>
+  //       </div>
+  //       )
 
-      }
-    }else{
-    if(text.length < 3 && text.length > 0){
-        return (
-        <div className={`modal ${estado && 'modal-option2f'}`}>
+  //     }
+  //   }
+  // }
 
-            <option className="option3" >KEEP TYPING...</option>  
+//   function Busqueda(){
+//     //setestado2(true)
+//     setautocomplet(true)
+//     if(text.length >= 3){
 
-        </div>
-        )
-
-      }
-    }
-  }
+//         if((characters.filter((item) => item.toLowerCase().includes(text.trim().toLowerCase()))).length > 0){
+//           return (
+//             <div className={`modal-2 ${autocomplet && 'modal-autoc'}`}>
+//                  <ul className="list-items4">
+//                 {characters.filter((item) =>
+//                 item.toLowerCase().includes(text.trim().toLowerCase()))
+//                           .slice(0, 5)
+//                           .map((item) =>  <li className="item-3" key= {item} onClick={() => cambio_text2(`${item}`)}> 
+//                                                 <span className="item-text">{item}</span>
+//                                         </li> )}
+//                 </ul>
+//             </div>
+//               )
+//         }else{
+//           return (
+//           <div className={`conten1 ${autocomplet && 'conten1-open'}`}>
+//             <ul className="list-items3">
+//               <li className="item-3" onClick={() => cambio_text("NO MATCHES FOUND!")}>
+//                 <span className="item-text">NO MATCHES FOUND!</span>
+//               </li>
+//             </ul>
+//           </div>
+//           )
   
-  <select className="form-select2" value={select} onChange={(e) => setselect(e.target.value)}>
-  <option selected>A-Z</option>
-  <option>Z-A</option>
-</select>
+//         }
+//       }
+//     if(text.length < 3 && text.length > 0){
+//         console.log("prueba 3nnn")
+//         return (
+//             <div className={`conten1 ${autocomplet && 'conten1-open'}`}>
+//               <ul className="list-items3" >
+//                 <li className="item-3"  onClick={() => cambio_text("KEEP TYPING...!")} >
+//                   <span className="item-text">KEEP TYPING...</span>
+//                 </li>
+//               </ul>
+//             </div>
+//             )
+//     }
+//  }
 
 
   function handleKeyDown(event) {
-    if (event.key === 'Enter') {
+    if (event.key == 'Enter') {
       // 👇 Get input value
       console.log('enter');
       setText2(text);
       setText3(true);
       setmodal(false)
-    }else{
-      setText3(false);
+      console.log("text3 ff", text)
     }
   }
 
+  const cambio_text = (a) =>{
+    settext(a);
+    setautocomplet(false)
+  }
+
+  const cambio_text2 = (a) =>{
+    settext(a);
+    setmodal(false)
+    setText2(a);
+    setautocomplet(false)
+  }
+  
   return (
     <div className="mvl-characters-page">
       <header className="mvl-characters-page-header">
@@ -262,10 +314,12 @@ export function CharacterPage() {
                     placeholder="SEARCH"
                     className="color_f"
                     value={text}
-                    onChange={(e) => setText(e.target.value)}
+                    onChange={(e) => settext(e.target.value)}
                     onKeyDown={handleKeyDown}
+                    onClick={() => setautocomplet(true)}
+                    //list="suggestions"
                   />
-                    <Orden2/>
+                  {/* <Orden2/> */}
                 </div>
               </div>
             </div>
@@ -274,8 +328,13 @@ export function CharacterPage() {
               <Filter_2 />
               <Filter_3 cambio_modal={cambio_modal}
               cambio_textmodal={cambio_textmodal}/>
+              
             </div>
           </div>
+          {/* <Busqueda/> */}
+          <Autocomplet text={text} cambio_text={cambio_text}
+           cambio_text2={cambio_text2} characters={characters}
+           autocomplet={autocomplet}/>
           </div>
         </div>
         <Orden/>

@@ -191,7 +191,7 @@ function Modal  ({ estado, closeModal, cambio_modal, cambio_textmodal })  {
               <span className="checkbox">
               <i className={`fa fa-check check-icon0 ${estado1 && 'check-icon-open0'}`}></i>
               </span>
-              <span className="item-text">Absolute Carnage (2019)(2011)</span>
+              <span className="item-text">Absolute Carnage (2019)</span>
             </li>
             <li className="item" onClick={cambio2}>
               <span className="checkbox">
