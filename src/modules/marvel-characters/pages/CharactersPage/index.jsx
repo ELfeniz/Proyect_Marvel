@@ -54,7 +54,7 @@ export function CharacterPage() {
       };
 
       var totaldat = ["Zzzax", "Zuras"];
-      for (var i = 1; i <= 65; i++) {     //65
+      for (var i = 1; i <= 40; i++) {     //65
         const data = await getCharactersForGrid(i, 24, orden, name);
         for (var i2 = 0; i2 <= 23; i2++) {
           var data3 = data.results[i2].name;
@@ -317,6 +317,7 @@ export function CharacterPage() {
                     onChange={(e) => settext(e.target.value)}
                     onKeyDown={handleKeyDown}
                     onClick={() => setautocomplet(true)}
+                    //onBlur={() => setautocomplet(false)}
                     //list="suggestions"
                   />
                   {/* <Orden2/> */}

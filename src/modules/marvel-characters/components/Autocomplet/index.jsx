@@ -24,19 +24,35 @@ function Busqueda(){
   if(text.length >= 3){
 
       if((characters.filter((item) => item.toLowerCase().includes(text.trim().toLowerCase()))).length > 0){
-        return (
-          <div className={`modal ${autocomplet && 'conten1-open2'}`}>
-               <ul className="list-items4">
-              {characters.filter((item) =>
-              item.toLowerCase().includes(text.trim().toLowerCase()))
-                        .slice(0, 5)
-                        .map((item) =>  <li className="item-3" key= {item} onClick={() => cambio_text2(`${item}`)}> 
-                                              <span className="item-text">{item}</span>
-                                      </li> )}
-              </ul>
-          </div>
-
-            )
+        if((characters.filter((item) => item.toLowerCase().includes(text.trim().toLowerCase()))).length < 3){
+          return (
+            <div className={`modal ${autocomplet && 'conten1-open2'}`}>
+                 <ul className="list-items4">
+                {characters.filter((item) =>
+                item.toLowerCase().includes(text.trim().toLowerCase()))
+                          .slice(0, 5)
+                          .map((item) =>  <li className="item-3" key= {item} onClick={() => cambio_text2(`${item}`)}> 
+                                                <span className="item-text">{item}</span>
+                                        </li> )}
+                </ul>
+            </div>
+  
+              )
+        }else{
+          return (
+            <div className={`modal ${autocomplet && 'conten1-open3'}`}>
+                 <ul className="list-items4">
+                {characters.filter((item) =>
+                item.toLowerCase().includes(text.trim().toLowerCase()))
+                          .slice(0, 5)
+                          .map((item) =>  <li className="item-3" key= {item} onClick={() => cambio_text2(`${item}`)}> 
+                                                <span className="item-text">{item}</span>
+                                        </li> )}
+                </ul>
+            </div>
+  
+              )
+        }
       }else{
         return (
         <div className={`conten1 ${autocomplet && 'conten1-open'}`}>
